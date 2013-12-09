@@ -13,7 +13,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-git push heroku master
 # gem 'debugger'
 gem "quiet_assets"
 gem 'httparty'
