@@ -1,0 +1,73 @@
+
+<h1><%= @local_lat %></h1>
+<h1><%= @local_lon %></h1>
+
+
+<style type="text/css">
+  html { height: 100% }
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+  }
+
+  #map-canvas {
+    border-style:solid;
+    border-width:1px;
+    height: 800px; width: 1200px;
+    margin: 50px auto;
+  }
+
+</style>
+
+
+<div id="map-canvas" style="padding-left: 50px"/></div>
+
+
+<script>
+
+
+           //google maps API
+function initialize() {
+
+
+   // // first remove all markers if there are any
+
+   //      deleteOverlays();
+
+  // initialize new google maps LatLng object
+  var myLatlng = new google.maps.LatLng(<%= @local_search['objects'][0]['venue']['lat'] %>, <%= @local_search['objects'][0]['venue']['long'] %>);
+
+  // set the map options hash
+  var mapOptions = {
+    center: myLatlng,
+    zoom: 3,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+
+
+  <% @local_search['objects'].each do |obj| %>
+
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(<%=obj['venue']['lat']%>, <%=obj['venue']['long']%>),
+      title: "<%=obj['venue']['name'].strip%>"
+    });
+    marker.setMap(map);
+
+  <% end %>
+
+
+}
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+</script>
+

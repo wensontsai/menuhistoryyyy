@@ -1,0 +1,32 @@
+<% @decade_popular["dishes"][0..9].each do |dish|  %>
+  <div class="boxed">
+    <h1><%= dish["name"] %></h1>
+    <img src="http://<%= dish["name"] %>.jpg.to" alt="food image" height="42" width="42">
+    <h4>On <%= dish["menus_appeared"]%> menus</h4>
+    <h4>First appeared in <%= dish["first_appeared"] %></h4>
+    <h4>Last appeared in <%= dish["last_appeared"] %></h4>
+    <form method="link" action=<%= locu_path(dish["name"]) %>>
+      <input class="finder" type="submit" value="Find Dish Today!">
+    </form>
+  </div>
+
+
+
+<% end %>
+
+<div id="timeline-embed">
+
+</div>
+
+<script>
+  $(document).ready(function() {
+
+      createStoryJS({
+          type:       'timeline',
+          width:      '100%',
+          height:     '300px',
+          source:      "/decade_data.json?decade=<%=@min%>,<%=@max%>",
+          embed_id:   'timeline-embed'
+      });
+  });
+</script>

@@ -1,0 +1,27 @@
+// Place all the styles related to the Foods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+document {
+  width: 100%;
+}*/
+
+body {
+  background-image: none;
+  width: 100%;
+}
+
+.boxed {
+  background-color: white;
+  opacity:0.7;
+  height: 250px;
+  border: 1px solid green ;
+  border-radius: 15px;
+  width: 350px;
+  float: left;
+  padding: 6px;
+  margin: 5px;
+  text-align: center;
+}
+
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dish: MyString
+  year: 1
+  qty: 1
+
+two:
+  dish: MyString
+  year: 1
+  qty: 1

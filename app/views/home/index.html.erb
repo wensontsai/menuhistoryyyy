@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MenuHistory</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<br><h1 style='text-align:center' id="title">Eating Through History</h1><br>
+
+<!-- <div class='btn-group-vertical span2' id='buttons'> -->
+  <a href=<%= foods_path('1851,1859') %> class="btn btn-primary btn-lg active" role="button">1850s</a>
+  <a href=<%= foods_path('1860,1869') %> class="btn btn-primary btn-lg active" role="button">1860s</a>
+  <a href=<%= foods_path('1870,1879') %> class="btn btn-primary btn-lg active" role="button">1870s</a>
+  <a href=<%= foods_path('1880,1889') %> class="btn btn-primary btn-lg active" role="button">1880s</a>
+  <a href=<%= foods_path('1890,1899') %> class="btn btn-primary btn-lg active" role="button">1890s</a>
+  <a href=<%= foods_path('1900,1909') %> class="btn btn-primary btn-lg active" role="button">1900s</a>
+  <a href=<%= foods_path('1910,1919') %> class="btn btn-primary btn-lg active" role="button">1910s</a>
+  <a href=<%= foods_path('1920,1929') %> class="btn btn-primary btn-lg active" role="button">1920s</a>
+  <a href=<%= foods_path('1930,1939') %> class="btn btn-primary btn-lg active" role="button">1930s</a>
+  <a href=<%= foods_path('1940,1949') %> class="btn btn-primary btn-lg active" role="button">1940s</a>
+  <a href=<%= foods_path('1950,1959') %> class="btn btn-primary btn-lg active" role="button">1950s</a>
+  <a href=<%= foods_path('1960,1969') %> class="btn btn-primary btn-lg active" role="button">1960s</a>
+  <a href=<%= foods_path('1970,1979') %> class="btn btn-primary btn-lg active" role="button">1970s</a>
+  <a href=<%= foods_path('1980,1989') %> class="btn btn-primary btn-lg active" role="button">1980s</a>
+  <a href=<%= foods_path('1990,1999') %> class="btn btn-primary btn-lg active" role="button">1990s</a>
+  <a href=<%= foods_path('2000,2009') %> class="btn btn-primary btn-lg active" role="button">2000s</a>
+  <a href=<%= foods_path('2010,2013') %> class="btn btn-primary btn-lg active" role="button">2010s</a>
+<!-- </div> -->
+<div>
+  <ul id='menu-items' class='span7'></ul>
+</div>
+
+
+</body>
+</html>
